@@ -1,13 +1,19 @@
-import { StrictMode } from 'react';
-import * as ReactDOM from 'react-dom/client';
+import { Route, Routes } from 'react-router-dom';
+import { Products } from '@react-monorepo/products';
+import { Orders } from '@react-monorepo/orders';
 
-import App from './app/app';
+function Home() {
+  return <h1>Home</h1>;
+}
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+export function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/products" element={<Products />}></Route>
+      <Route path="/orders" element={<Orders />}></Route>
+    </Routes>
+  );
+}
+
+export default App;
