@@ -17,7 +17,8 @@
     "paths": {
       "@react-monorepo/orders": ["libs/orders/src/index.ts"],
       "@react-monorepo/products": ["libs/products/src/index.ts"],
-      "@react-monorepo/ui": ["libs/shared/ui/src/index.ts"]
+      "@react-monorepo/ui": ["libs/shared/ui/src/index.ts"],
+      "remote1/Module": ["apps/remote1/src/remote-entry.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
